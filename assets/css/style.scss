@@ -1,0 +1,288 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+h2 {
+  color: #902800;
+}
+
+h3 {
+  color: #802800;
+}
+
+
+h4 {
+  color: #702800;
+}
+
+hr {
+  border-top: 3px dashed #990000;
+  background: none;
+}
+
+nav {
+  top: 210px;
+
+  ul {
+    li {
+      &.tag-h2 {
+        font-size: 1.1em;
+        font-family: Courier, monospace; 
+        a {
+          font-weight: bold;
+          color: #555;
+        }
+
+        + .tag-h3 {       }
+      }
+
+      &.tag-h3 {
+        font-size: 1em;
+        font-family: Courier, monospace; 
+
+        + .tag-h2 {
+          margin-top:10px;
+        }
+      }
+    }
+  }
+}
+
+#links{
+  font-weight: bold;
+  color: #3761FF;
+  a {
+    font-weight: bold;
+    color: #3761FF;
+  }
+}
+
+#banner{
+  #logo {
+    position:absolute;
+    height: 36px;
+    width: 36px;
+    right:7px;
+    top:7px;
+    display: block;
+    background: url(../images/octocat-logo.png);
+  }
+}
+
+header {
+  padding: 20px 20px 20px 5px;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left:0;
+  right:0;
+  width: 100%;
+  text-align: center;
+  background: #990000;
+  box-shadow: 1px 0px 2px rgba(0,0,0,.75);
+  z-index:99;
+  -webkit-font-smoothing:antialiased;
+  min-height: 46px;
+
+  h1 {
+    font: 34px/40px 'Copse', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #f3f3f3;
+    text-shadow: 0px 2px 0px #235796;
+    margin: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+  }
+
+  p {
+    color: #d8d8d8;
+    text-shadow:rgba(#000, 0.2) 0 1px 0;
+    font-size: 18px;
+    margin: 0px;
+  }
+}
+
+#banner {
+  top: 80px;
+  background: #808B96;
+  margin-right:-362px;
+  border: 1px solid  #566573;
+
+  .home {
+    border: 0px solid #566573;
+    background: #808B96;
+    border-radius: 2px;
+    margin-left: 5px;
+    padding: 10px 12px;
+    margin-top: 8px;
+    line-height:14px;
+    font-size:16px;
+    color:#990000;
+    font-weight: bold;
+    display:inline-block;
+    text-align:center;
+  }
+  
+  .homefork {
+    position:fixed;
+    left:50%;
+    margin-left:-350px;
+    padding: 10px 12px;
+    margin-top: 8px;
+    line-height:14px;
+    font-size:16px;
+    background-color: #FFE788;
+  }  
+
+  .groupfork {
+    position:fixed;
+    left:50%;
+    margin-left:-271px;
+    padding: 10px 12px;
+    margin-top: 8px;
+    line-height:14px;
+    font-size:16px;
+    background-color: #FFE788;
+  }  
+
+  .resfork {
+    position:fixed;
+    left:50%;
+    margin-left:-190px;
+    padding: 10px 12px;
+    margin-top: 8px;
+    line-height:14px;
+    font-size:16px;
+    background-color: #FFE788;
+  }  
+
+  .pubfork {
+    position:fixed;
+    left:50%;
+    margin-left:-89px;
+    padding: 10px 12px;
+    margin-top: 8px;
+    line-height:14px;
+    font-size:16px;
+    background-color: #FFE788;
+  }  
+}
+
+section {
+  margin-top: 155px;
+}
+
+@media print, screen and (max-width: 720px) {
+  body {
+    word-wrap:break-word;
+  }
+
+  header {
+    padding:20px 5px;
+    margin: 0;
+
+    h1 {
+      font-size: 32px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+      -ms-text-overflow: ellipsis;
+    }
+
+    p { display: none;}
+  }
+
+  #banner {
+    top: 80px;
+
+    .homefork {
+      float: left;
+      display: inline-block;
+      margin-left: 0px;
+    position:fixed;
+    left:5px;
+
+      }
+
+    .groupfork {
+      float: left;
+      display: inline-block;
+      margin-left: 0px;
+    position:fixed;
+    left:75px;
+      }
+
+   .resfork {
+      float: left;
+      display: inline-block;
+      margin-left: 0px;
+    position:fixed;
+    left:146px;
+      }
+
+    .pubfork {
+      float: left;
+      display: inline-block;
+      margin-left: 0px;
+    position:fixed;
+    left:237px;
+      }
+ }
+
+  section {
+    margin-top: 130px;
+    margin-bottom: 0px;
+    width: auto;
+  }
+
+  header ul, header p.view {
+    position:static;
+  }
+}
+
+@media print, screen and (max-width: 480px) {
+  body {
+  }
+
+  header{
+    position: fixed;
+    padding: 5px 0px;
+    min-height: 0px;
+
+    h1 {
+      font-size: 24px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+      -ms-text-overflow: ellipsis;
+    }
+  }
+  section {
+    margin-top: 110px;
+  }
+
+  #banner { 
+    #logo{
+      display: none;
+    }
+    top: 50px;
+    display: inline;
+  }  
+  header ul {
+    display:inline;
+  }
+}
+
+@media print {
+  table {
+    border: 0 !important;
+  }
+  #myHeader tr:first-of-type td {
+    border: 0 !important;
+  }
+}
